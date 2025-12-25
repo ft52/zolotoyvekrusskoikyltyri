@@ -15,7 +15,26 @@ $(document).ready(function() {
     
     // Инициализация кнопки "Наверх"
     initBackToTopButton();
+
+    initTypedJS();
 });
+
+function initTypedJS() {
+    if ($('#typed-text').length) {
+        var typed = new Typed('#typed-text', {
+            strings: [
+                'русской культуры',              
+            ],
+            typeSpeed: 60,
+            backSpeed: 40,
+            backDelay: 1500,
+            startDelay: 500,
+            loop: true,
+            showCursor: true,
+            cursorChar: '|'
+        });
+    }
+}
 
 // Показать активную страницу при загрузке
 function showActivePageOnLoad() {
